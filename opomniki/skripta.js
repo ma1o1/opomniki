@@ -1,5 +1,21 @@
 window.addEventListener('load', function() {
 	//stran nalozena
+		var izvedineki=function(event){
+		var a = document.querySelector("#naziv_opomnika").value;
+		var b = document.querySelector("#cas_opomnika").value;
+		
+		document.querySelector("#naziv_opomnika").innerHTML = "";
+		document.querySelector("#cas_opomnika").innerHTML = "";
+		
+		document.querySelector("#opomniki").innerHTML +=
+		"<div class='opomnik'>  <div class='naziv_opomnika'>"+a+"</div> <div class='cas_opomnika'> Opomnik čez <span>"+b+"</span> sekund.</div> </div>"
+		
+		
+	}
+	document.querySelector("#dodajGumb").addEventListener
+	("click",izvedineki);
+	
+	
 	var izvediprijavo=function(event){
 		var uporabnik = document.querySelector("#uporabnisko_ime").value;
 		document.querySelector("#uporabnik").innerHTML = uporabnik;
