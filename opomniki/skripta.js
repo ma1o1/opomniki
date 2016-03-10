@@ -35,6 +35,14 @@ window.addEventListener('load', function() {
 			var cas = parseInt(casovnik.innerHTML);
 	
 			//TODO: 
+			if(cas == 0){
+				var uporabnika=opomnik.querySelector(".naziv_opomnika").innerHTML;
+				alert("Potekel je "+uporabnika);
+				document.querySelector("#opomniki").removeChild(opomnik);
+			}
+			else{
+				casovnik.innerHTML= cas- 1;
+			}
 			// - če je čas enak 0, izpiši opozorilo "Opomnik!\n\nZadolžitev NAZIV_OPOMNIK je potekla!"
 			// - sicer zmanjšaj čas za 1 in nastavi novo vrednost v časovniku
 		}
